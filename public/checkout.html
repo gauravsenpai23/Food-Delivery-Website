@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Vintage Aura Classic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html"><img src="/api/placeholder/120/60" alt="Vintage Aura Classic" class="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="checkout.html" class="cart-icon" aria-label="View Cart">🛒
+                <span class="cart-count">0</span>
+            </a>
+            <button class="mobile-menu" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-title">
+            <h1>Checkout</h1>
+            <p>Review your order and provide details</p>
+        </div>
+
+        <div class="checkout-container">
+
+            <div class="checkout-details">
+                <form id="checkout-form">
+                    <div class="checkout-section" id="delivery-details">
+                        <h2>Delivery Information</h2>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Delivery Address</label>
+                            <input type="text" id="address" name="address" class="form-control" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required pattern="[0-9]{10}" title="Please enter a 10-digit phone number">
+                             <small>Format: 10 digits</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address (Optional)</label>
+                            <input type="email" id="email" name="email" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="checkout-section" id="payment-method">
+                        <h2>Payment Method</h2>
+                        <div class="payment-options">
+                             <label>
+                                <input type="radio" name="payment" value="cod" checked required> Cash on Delivery (COD)
+                            </label>
+                            <label style="color: #999;"> <input type="radio" name="payment" value="card" disabled> Credit/Debit Card (Unavailable)
+                             </label>
+                             <label style="color: #999;">
+                                <input type="radio" name="payment" value="upi" disabled> UPI (Unavailable)
+                             </label>
+                        </div>
+                    </div>
+                    </form>
+            </div>
+
+            <div class="checkout-summary">
+                <div class="checkout-section" id="cart-summary">
+                    <h2>Your Order</h2>
+                    <ul id="cart-items-list">
+                       <p id="empty-cart-message">Your cart is currently empty. <a href="menu.html">Browse Menu</a></p>
+                    </ul>
+                    <div id="cart-total-container" style="display: none;"> <div id="cart-total">
+                            <strong>Total:</strong>
+                            <span id="total-amount">₹0.00</span>
+                        </div>
+                        <button type="submit" form="checkout-form" class="place-order-btn">Place Order</button>
+                    </div>
+                </div>
+            </div>
+
+        </div> </main>
+
+    <footer>
+        <div class="footer-content">
+             <div class="footer-info">
+                 <a href="index.html"><img src="/api/placeholder/160/80" alt="Vintage Aura Classic" class="footer-logo"></a>
+                <p>Experience the finest food delivered fresh to your doorstep.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                 <p>Phone: <a href="tel:9084215893" style="color: #ccc; text-decoration:none;">9084215893</a>, <a href="tel:8791186888" style="color: #ccc; text-decoration:none;">8791186888</a></p>
+                 <p>Address: Fatehpur Range, Uttarakhand, India</p> <p>Hours: 10:00 AM - 10:00 PM</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Book Event</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+             <p>&copy; <span id="current-year"></span> Vintage Aura Classic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
